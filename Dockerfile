@@ -1,8 +1,16 @@
-FROM juliusworks/node:8
+# Build the app
+FROM juliusworks/node:8 as build
+WORKDIR /app
 
-WORKDIR /apps/statsd
 COPY . .
 RUN yarn install --production
 
-CMD [ "node", "./run.js" ]
+# Build final docker image
+FROM alpine:3.6
+WORKDIR /app
+RUN apk add --no-cache libstdc++
+COPY --from=build /usr/bin/node /usr/bin/
+COPY --from=build /app /app
+
 EXPOSE 8125
+ENTRYPOINT [ "/app/run.js" ]
