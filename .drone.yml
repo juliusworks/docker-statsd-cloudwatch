@@ -1,0 +1,25 @@
+pipeline:
+
+  publish:
+    image: plugins/docker
+    repo: juliusworks/pulls
+    tags:
+      - latest
+      - "${DRONE_TAG}"
+    dockerfile: docker/pulls.dockerfile
+    secrets: [ docker_username, docker_password ]
+    when:
+      event: [ tag ]
+
+  deploy:
+    group: deploy
+    image: peloton/drone-rancher
+    url: https://rancher.julius.cloud
+    service: "ops/statsd-cloudwatch"
+    docker_image: "juliusworks/statsd-cloudwatch:${DRONE_TAG}"
+    start_first: false
+    confirm: true
+    timeout: 600
+    secrets: [ rancher_access_key, rancher_secret_key, github_username, github_password ]
+    when:
+      event: [ tag ]
