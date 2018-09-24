@@ -13,8 +13,6 @@ Via environment variables:
 
 * `CLOUDWATCH_NAMESPACE`: CloudWatch namespace to send metrics to
   (optional, defaults to "AwsCloudWatchStatsdBackend")
-* `PORT_UDP`
-* `PORT_TCP`
 
 Plus the usual AWS configuration env vars
 

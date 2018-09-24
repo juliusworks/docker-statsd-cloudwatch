@@ -2,16 +2,7 @@
 	// Set base config
 	const config = {
 		cloudwatch: { },
-		backends: [ 'aws-cloudwatch-statsd-backend' ],
-		servers: [
-			{
-				server: './servers/udp',
-				port: Number(process.env.PORT_UDP || 8125)
-			}, {
-				server: './servers/tcp',
-				port: Number(process.env.PORT_TCP || 8125)
-			}
-		]
+		backends: [ 'aws-cloudwatch-statsd-backend' ]
 	}
 
 	// Set namespace where all metrics should be sent
