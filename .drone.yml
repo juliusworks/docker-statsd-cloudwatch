@@ -2,11 +2,10 @@ pipeline:
 
   publish:
     image: plugins/docker
-    repo: juliusworks/pulls
+    repo: juliusworks/statsd-cloudwatch
     tags:
       - latest
       - "${DRONE_TAG}"
-    dockerfile: docker/pulls.dockerfile
     secrets: [ docker_username, docker_password ]
     when:
       event: [ tag ]
