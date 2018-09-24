@@ -4,5 +4,9 @@
   "devDependencies": {
     "eslint": "^3.3",
     "eslint-config-grind": "^2.0.4"
+  },
+  "dependencies": {
+    "aws-cloudwatch-statsd-backend": "https://github.com/camitz/aws-cloudwatch-statsd-backend#466e70135e108e6de3b7b421bf446c2b5c90be64",
+    "statsd": "https://github.com/etsy/statsd"
   }
 }
