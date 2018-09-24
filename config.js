@@ -2,7 +2,7 @@
 	// Set base config
 	const config = {
 		cloudwatch: { },
-		backends: [ 'aws-cloudwatch-statsd-backend' ]
+		backends: [ 'cloudwatch-backend-for-statsd' ]
 	}
 
 	// Set namespace where all metrics should be sent

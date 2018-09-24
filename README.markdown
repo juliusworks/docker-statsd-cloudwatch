@@ -5,7 +5,7 @@ This container runs a StatsD server that periodically flushes its metrics to AWS
 Uses:
 
 * [github.com/etsy/statsd](https://github.com/etsy/statsd)
-* [github.com/camitz/aws-cloudwatch-statsd-backend](https://github.com/camitz/aws-cloudwatch-statsd-backend)
+* [github.com/ridrum/cloudwatch-backend-for-statsd](https://github.com/ridrum/cloudwatch-backend-for-statsd)
 
 ## Configuration
 
