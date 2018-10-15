@@ -8,4 +8,5 @@ process.argv = [
 	path.join(__dirname, 'config.js')
 ]
 
+require('./health.js')
 require('statsd/stats.js')
