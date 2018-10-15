@@ -1,7 +1,7 @@
 {
   "name": "docker-statsd-cloudwatch",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "devDependencies": {
     "eslint": "^3.3",
     "eslint-config-grind": "^2.0.4"
