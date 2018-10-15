@@ -13,7 +13,7 @@ pipeline:
   deploy:
     group: deploy
     image: peloton/drone-rancher
-    url: https://rancher.julius.cloud
+    url: https://rancher.internal.julius.cloud
     service: "ops/statsd-cloudwatch"
     docker_image: "juliusworks/statsd-cloudwatch:${DRONE_TAG}"
     start_first: false
